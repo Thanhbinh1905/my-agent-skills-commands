@@ -1,0 +1,183 @@
+{
+  "$schema_version": 1,
+  "registry_type": "omo-skill-routing-sidecar",
+  "purpose": "Recommended support-skill profiles for OMO categories and agents. This sidecar augments orchestration decisions without modifying existing skill definitions or oh-my-openagent category semantics.",
+  "source_of_truth": {
+    "omo_config": "/home/thanhbinh/.config/opencode/oh-my-openagent.json",
+    "skill_tree": "/home/thanhbinh/.config/opencode/skills/SKILL_TREE.json"
+  },
+  "routing_rules": {
+    "max_default_auto_load": 4,
+    "allow_domain_autoload": false,
+    "selection_order": [
+      "explicit_user_request",
+      "agent_profile",
+      "category_profile",
+      "taxonomy_match",
+      "manual_operator_override"
+    ],
+    "notes": [
+      "Category profiles are for cross-cutting support skills only.",
+      "Domain/framework skills should be loaded from explicit task fit, not category alone.",
+      "When multiple overlap policies apply, prefer the canonical skill listed in SKILL_TREE.json."
+    ]
+  },
+  "category_support_profiles": {
+    "deep": {
+      "label": "Thorough engineering lane",
+      "support_skills": [
+        "requirements",
+        "search",
+        "security",
+        "testing",
+        "verification"
+      ]
+    },
+    "ultrabrain": {
+      "label": "Hard logic and architecture lane",
+      "support_skills": [
+        "requirements",
+        "search",
+        "architecture-decision-records",
+        "verification"
+      ]
+    },
+    "visual-engineering": {
+      "label": "UI/UX and visual implementation lane",
+      "support_skills": [
+        "frontend-design",
+        "accessibility",
+        "browser-qa",
+        "ui-demo"
+      ]
+    },
+    "writing": {
+      "label": "Writing and documentation lane",
+      "support_skills": [
+        "article-writing",
+        "brand-voice",
+        "content-engine"
+      ]
+    },
+    "artistry": {
+      "label": "Creative and media-heavy lane",
+      "support_skills": [
+        "canvas-design",
+        "fal-ai-media",
+        "video-editing"
+      ]
+    },
+    "quick": {
+      "label": "Low-latency operator lane",
+      "support_skills": [
+        "terminal-ops",
+        "search",
+        "git"
+      ]
+    },
+    "unspecified-high": {
+      "label": "General high-effort lane",
+      "support_skills": [
+        "requirements",
+        "search",
+        "verification"
+      ]
+    },
+    "unspecified-low": {
+      "label": "General low-effort lane",
+      "support_skills": [
+        "search",
+        "terminal-ops"
+      ]
+    }
+  },
+  "agent_support_profiles": {
+    "sisyphus": {
+      "label": "Primary orchestrator",
+      "support_skills": [
+        "requirements-clarity",
+        "search",
+        "verification",
+        "security"
+      ]
+    },
+    "metis": {
+      "label": "Pre-planning consultant",
+      "support_skills": [
+        "requirements",
+        "requirements-clarity",
+        "product-lens",
+        "product-capability"
+      ]
+    },
+    "momus": {
+      "label": "Plan/review critic",
+      "support_skills": [
+        "verification",
+        "code-review",
+        "security-review"
+      ]
+    },
+    "oracle": {
+      "label": "Read-only high-IQ consultant",
+      "support_skills": [
+        "search",
+        "architecture-decision-records",
+        "code-review"
+      ]
+    },
+    "hephaestus": {
+      "label": "Builder/refiner lane",
+      "support_skills": [
+        "backend-patterns",
+        "frontend-patterns",
+        "testing",
+        "verification"
+      ]
+    },
+    "atlas": {
+      "label": "Wide-scope execution lane",
+      "support_skills": [
+        "search",
+        "verification",
+        "terminal-ops"
+      ]
+    },
+    "librarian": {
+      "label": "External reference specialist",
+      "support_skills": [
+        "documentation-lookup",
+        "exa-search",
+        "deep-research"
+      ]
+    },
+    "explore": {
+      "label": "Internal discovery specialist",
+      "support_skills": [
+        "search",
+        "code-tour",
+        "codebase-onboarding"
+      ]
+    },
+    "multimodal-looker": {
+      "label": "Visual/document analysis specialist",
+      "support_skills": [
+        "vision-analysis",
+        "minimax-pdf",
+        "nutrient-document-processing"
+      ]
+    }
+  },
+  "integration_notes": {
+    "preferred_runtime_usage": [
+      "Read this file as a sidecar registry during orchestration.",
+      "Do not mutate oh-my-openagent.json categories to store taxonomy state unless schema support is added later.",
+      "If OMO later supports native defaults, materialize these profiles into agent/category config from this file rather than editing individual skills."
+    ],
+    "non_goals": [
+      "Not a replacement for skill trigger matching.",
+      "Not a mandate to auto-load every listed skill.",
+      "Not a modification of existing skill metadata."
+    ]
+  }
+}

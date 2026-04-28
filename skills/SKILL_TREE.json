@@ -1,0 +1,416 @@
+{
+  "$schema_version": 1,
+  "registry_type": "skill-tree-sidecar",
+  "purpose": "Human-maintained taxonomy and classification aid for the local OpenCode skill library. This file does not modify or override any existing skill definition.",
+  "guarantees": {
+    "read_only_against_existing_skills": true,
+    "modifies_existing_skill_files": false,
+    "deletes_existing_skill_files": false
+  },
+  "taxonomy": {
+    "build": {
+      "label": "Build",
+      "summary": "Implementation-oriented engineering skills for application, platform, data, and architecture work.",
+      "category_bias": [
+        "deep",
+        "ultrabrain"
+      ],
+      "subtrees": {
+        "frontend-ui": {
+          "summary": "Frontend patterns, design systems, accessibility, and UI implementation.",
+          "skill_examples": [
+            "frontend-patterns",
+            "frontend-design",
+            "design-system",
+            "accessibility",
+            "click-path-audit"
+          ]
+        },
+        "backend-api": {
+          "summary": "Backend architecture, APIs, services, and integration patterns.",
+          "skill_examples": [
+            "backend-patterns",
+            "api-design",
+            "api-connector-builder",
+            "fullstack-dev",
+            "nestjs-patterns"
+          ]
+        },
+        "data-db": {
+          "summary": "Database schema, migrations, queries, and datastore-specific patterns.",
+          "skill_examples": [
+            "database-migrations",
+            "postgres",
+            "postgres-patterns",
+            "mssql-server",
+            "clickhouse-io"
+          ]
+        },
+        "mobile": {
+          "summary": "iOS, Android, Flutter, React Native, and cross-platform application patterns.",
+          "skill_examples": [
+            "android-clean-architecture",
+            "android-native-dev",
+            "ios-application-dev",
+            "flutter-dev",
+            "react-native-dev"
+          ]
+        },
+        "language-framework": {
+          "summary": "Language- and framework-specific conventions and patterns.",
+          "skill_examples": [
+            "python-patterns",
+            "golang-patterns",
+            "rust-patterns",
+            "kotlin-patterns",
+            "springboot-patterns"
+          ]
+        },
+        "architecture": {
+          "summary": "Requirements, product capability shaping, and architectural decision support.",
+          "skill_examples": [
+            "requirements",
+            "requirements-clarity",
+            "product-capability",
+            "product-lens",
+            "hexagonal-architecture"
+          ]
+        }
+      }
+    },
+    "verify": {
+      "label": "Verify",
+      "summary": "Testing, verification, review, and quality gates.",
+      "category_bias": [
+        "deep",
+        "quick"
+      ],
+      "subtrees": {
+        "testing": {
+          "summary": "Test strategy, TDD, and framework-specific testing guidance.",
+          "skill_examples": [
+            "testing",
+            "tdd-workflow",
+            "python-testing",
+            "golang-testing",
+            "e2e-testing"
+          ]
+        },
+        "verification": {
+          "summary": "Build, lint, typecheck, and release-readiness verification.",
+          "skill_examples": [
+            "verification",
+            "verification-loop",
+            "benchmark",
+            "browser-qa",
+            "canary-watch"
+          ]
+        },
+        "review": {
+          "summary": "Code review, architecture review, and onboarding-quality analysis.",
+          "skill_examples": [
+            "code-review",
+            "code-review-expert",
+            "codebase-onboarding",
+            "code-tour",
+            "repo-scan"
+          ]
+        }
+      }
+    },
+    "secure": {
+      "label": "Secure",
+      "summary": "Application, infrastructure, and domain-specific security and compliance work.",
+      "category_bias": [
+        "deep",
+        "ultrabrain"
+      ],
+      "subtrees": {
+        "application-security": {
+          "summary": "Cross-stack application security review and implementation guidance.",
+          "skill_examples": [
+            "security",
+            "security-review",
+            "security-scan",
+            "security-bounty-hunter",
+            "safety-guard"
+          ]
+        },
+        "framework-security": {
+          "summary": "Framework-specific security best practices.",
+          "skill_examples": [
+            "django-security",
+            "laravel-security",
+            "springboot-security",
+            "perl-security",
+            "hipaa-compliance"
+          ]
+        },
+        "specialized-security": {
+          "summary": "Specialized domain security such as healthcare and web3.",
+          "skill_examples": [
+            "healthcare-phi-compliance",
+            "healthcare-eval-harness",
+            "defi-amm-security",
+            "llm-trading-agent-security",
+            "evm-token-decimals"
+          ]
+        }
+      }
+    },
+    "research": {
+      "label": "Research",
+      "summary": "Search, documentation lookup, evidence gathering, and current-state analysis.",
+      "category_bias": [
+        "deep",
+        "quick"
+      ],
+      "subtrees": {
+        "search-docs": {
+          "summary": "Internal/external search and documentation retrieval.",
+          "skill_examples": [
+            "search",
+            "search-first",
+            "documentation-lookup",
+            "exa-search",
+            "deep-research"
+          ]
+        },
+        "analysis": {
+          "summary": "Research workflows for market, product, and operational analysis.",
+          "skill_examples": [
+            "research-ops",
+            "market-research",
+            "lead-intelligence",
+            "knowledge-ops",
+            "iterative-retrieval"
+          ]
+        }
+      }
+    },
+    "operate": {
+      "label": "Operate",
+      "summary": "Execution workflows, git/GitHub operations, deployments, and workspace tooling.",
+      "category_bias": [
+        "quick",
+        "unspecified-low"
+      ],
+      "subtrees": {
+        "git-workflow": {
+          "summary": "Git, GitHub, and project-flow operations.",
+          "skill_examples": [
+            "git",
+            "git-workflow",
+            "github-ops",
+            "project-flow-ops",
+            "jira-integration"
+          ]
+        },
+        "runtime-ops": {
+          "summary": "Terminal, deployment, notification, and workspace execution surfaces.",
+          "skill_examples": [
+            "terminal-ops",
+            "deployment-patterns",
+            "docker-patterns",
+            "messages-ops",
+            "email-ops"
+          ]
+        },
+        "workspace-ops": {
+          "summary": "Workspace, knowledge, and operator workflow support.",
+          "skill_examples": [
+            "workspace-surface-audit",
+            "google-workspace-ops",
+            "unified-notifications-ops",
+            "automation-audit-ops",
+            "ck"
+          ]
+        }
+      }
+    },
+    "agent": {
+      "label": "Agent",
+      "summary": "Agent construction, orchestration, evaluation, memory, and autonomous execution.",
+      "category_bias": [
+        "ultrabrain",
+        "deep"
+      ],
+      "subtrees": {
+        "construction": {
+          "summary": "Agent harnesses, action-space design, and skill-aware orchestration.",
+          "skill_examples": [
+            "agent-harness-construction",
+            "agentic-engineering",
+            "autonomous-agent-harness",
+            "autonomous-loops",
+            "team-builder"
+          ]
+        },
+        "evaluation": {
+          "summary": "Agent evaluation, introspection, and compliance verification.",
+          "skill_examples": [
+            "agent-eval",
+            "agent-introspection-debugging",
+            "eval-harness",
+            "skill-comply",
+            "santa-method"
+          ]
+        },
+        "memory-context": {
+          "summary": "Context, knowledge, and continuous learning support for agents.",
+          "skill_examples": [
+            "continuous-learning",
+            "continuous-learning-v2",
+            "context-budget",
+            "strategic-compact",
+            "agent-sort"
+          ]
+        }
+      }
+    },
+    "create": {
+      "label": "Create",
+      "summary": "Writing, document generation, design, media, and presentation output.",
+      "category_bias": [
+        "writing",
+        "artistry",
+        "visual-engineering"
+      ],
+      "subtrees": {
+        "writing": {
+          "summary": "Long-form writing, content systems, voice, and prompt shaping.",
+          "skill_examples": [
+            "article-writing",
+            "brand-voice",
+            "content-engine",
+            "crosspost",
+            "prompt-optimizer"
+          ]
+        },
+        "documents": {
+          "summary": "Structured document and presentation generation.",
+          "skill_examples": [
+            "minimax-docx",
+            "minimax-pdf",
+            "minimax-xlsx",
+            "pptx-generator",
+            "nutrient-document-processing"
+          ]
+        },
+        "media-design": {
+          "summary": "Visual, audio, video, and creative asset generation.",
+          "skill_examples": [
+            "canvas-design",
+            "fal-ai-media",
+            "video-editing",
+            "videodb",
+            "vision-analysis"
+          ]
+        }
+      }
+    },
+    "domain": {
+      "label": "Domain",
+      "summary": "Industry-specific vertical skills where domain language matters as much as implementation technique.",
+      "category_bias": [
+        "deep",
+        "writing"
+      ],
+      "subtrees": {
+        "healthcare": {
+          "summary": "Healthcare workflows, safety, privacy, and CDSS/EMR support.",
+          "skill_examples": [
+            "healthcare-cdss-patterns",
+            "healthcare-emr-patterns",
+            "healthcare-phi-compliance",
+            "healthcare-eval-harness",
+            "hipaa-compliance"
+          ]
+        },
+        "finance-billing": {
+          "summary": "Billing, customer revenue operations, and investor-facing materials.",
+          "skill_examples": [
+            "finance-billing-ops",
+            "customer-billing-ops",
+            "investor-materials",
+            "investor-outreach",
+            "x-api"
+          ]
+        },
+        "ops-industry": {
+          "summary": "Logistics, procurement, planning, manufacturing, and quality operations.",
+          "skill_examples": [
+            "inventory-demand-planning",
+            "production-scheduling",
+            "quality-nonconformance",
+            "carrier-relationship-management",
+            "customs-trade-compliance"
+          ]
+        }
+      }
+    }
+  },
+  "classification_policy": {
+    "primary_axis": "job_to_be_done",
+    "secondary_axis": "technical_domain",
+    "notes": [
+      "OMO categories are execution/model-routing hints, not the taxonomy itself.",
+      "Domain skills should be selected from activation signals and tags, not bulk auto-loaded from category alone.",
+      "This tree is intentionally coarse at the top level to remain maintainable around a ~200-skill library size."
+    ]
+  },
+  "overlap_policies": [
+    {
+      "group": "continuous-learning",
+      "canonical": "continuous-learning-v2",
+      "others": [
+        "continuous-learning"
+      ],
+      "policy": "prefer_canonical"
+    },
+    {
+      "group": "verification",
+      "canonical": "verification",
+      "others": [
+        "verification-loop"
+      ],
+      "policy": "use_wrapper_only_for_orchestration"
+    },
+    {
+      "group": "code-review",
+      "canonical": "code-review",
+      "others": [
+        "code-review-expert"
+      ],
+      "policy": "prefer_general_first_then_expert_for_deeper_review"
+    },
+    {
+      "group": "research-stack",
+      "canonical": "research-ops",
+      "others": [
+        "deep-research",
+        "exa-search",
+        "search-first"
+      ],
+      "policy": "use_canonical_as_operator_workflow"
+    },
+    {
+      "group": "flutter-stack",
+      "canonical": "flutter-dev",
+      "others": [
+        "dart-flutter-patterns",
+        "flutter-dart-code-review"
+      ],
+      "policy": "split_dev_patterns_review_by_intent"
+    },
+    {
+      "group": "frontend-stack",
+      "canonical": "frontend-patterns",
+      "others": [
+        "frontend-design",
+        "frontend-dev"
+      ],
+      "policy": "patterns_first_design_for_visual_quality_media_variant_only_when_needed"
+    }
+  ]
+}
